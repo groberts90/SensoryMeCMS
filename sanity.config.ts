@@ -2,18 +2,16 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
-import { config } from "dotenv";
-
-config();
+import {emojiPlugin} from 'sanity-plugin-emoji'
 
 export default defineConfig({
   name: 'default',
   title: 'SensoryMeCMS',
 
-  projectId: process.env.SANITY_STUDIO_PROJECTID ?? '',
-  dataset: process.env.SANITY_DATASET ?? '',
+  projectId: import.meta.env.SANITY_STUDIO_PROJECTID ?? '',
+  dataset: import.meta.env.SANITY_STUDIO_DATASET ?? '',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), emojiPlugin()],
 
   schema: {
     types: schemaTypes,

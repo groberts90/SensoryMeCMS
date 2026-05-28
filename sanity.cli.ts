@@ -6,7 +6,7 @@ config();
 export default defineCliConfig({
   api: {
     projectId: process.env.SANITY_STUDIO_PROJECTID,
-    dataset: process.env.SANITY_DATASET,
+    dataset: process.env.SANITY_STUDIO_DATASET,
   },
   deployment: {
     appId: 'process.env.SANITY_STUDIO_APPID',
