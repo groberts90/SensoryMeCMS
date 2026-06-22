@@ -19,7 +19,7 @@ export const userSchema = defineType({
       validation: (R) => R.required().email(),
     }),
     defineField({
-      name: "passwordHash",
+      name: "password",
       type: "string",
       title: "Password Hash",
       hidden: true,
