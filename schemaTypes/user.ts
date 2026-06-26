@@ -40,6 +40,24 @@ export const userSchema = defineType({
       initialValue: true,
     }),
     defineField({
+      name: "greyscale",
+      type: "boolean",
+      title: "Greyscale",
+      initialValue: false,
+    }),
+    defineField({
+      name: "dyslexia",
+      type: "boolean",
+      title: "Dyslexia",
+      initialValue: false,
+    }),
+    defineField({
+      name: "reducedMotion",
+      type: "boolean",
+      title: "Reduced Motion",
+      initialValue: false,
+    }),
+    defineField({
       name: "strategies",
       title: "Chosen Strategies",
       type: "array",
